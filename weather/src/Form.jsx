@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as Yup from "yup";
 
 function Form({ getWeatherByZip, getWeatherByName }) {
   const [input, setInput] = useState({ cityName: "", cityZip: "" });
@@ -26,7 +27,8 @@ function Form({ getWeatherByZip, getWeatherByName }) {
           value={input.cityName}
           onChange={handleChanges}
         ></input>
-          <input type="submit" />
+
+        <input type="submit" />
       </form>
       <form onSubmit={handleSubmitZip}>
         <input
